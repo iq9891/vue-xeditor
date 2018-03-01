@@ -1,7 +1,7 @@
-import EmCkeditor from './EmCkeditor.vue';
+import VueXeditor from './VueXeditor.vue';
 
-EmCkeditor.install = (Vue) => {
-  Vue.component(EmCkeditor.name, EmCkeditor);
+VueXeditor.install = (Vue) => {
+  Vue.component(VueXeditor.name, VueXeditor);
 };
 
-export default EmCkeditor;
+export default VueXeditor;

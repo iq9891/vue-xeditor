@@ -6,7 +6,7 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'directives',
-      component: require('./components/CkeditorPage.vue'),
+      component: require('./components/XeditorPage.vue'),
     },
   ],
 });

@@ -3,10 +3,10 @@ import VueRouter from 'vue-router';
 import App from './app.vue';
 import router from './router';
 // 开发版
-import EmCkeditor from '../../src/index';
+import VueXeditor from '../../src/index';
 
 Vue.use(VueRouter);
-Vue.use(EmCkeditor);
+Vue.use(VueXeditor);
 // 开启debug模式
 Vue.config.debug = true;
 

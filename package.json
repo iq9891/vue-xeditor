@@ -1,5 +1,5 @@
 {
-  "name": "em-xeditor",
+  "name": "vue-xeditor",
   "version": "1.0.0",
   "description": "vue 的 xeditor 富文本编辑器",
   "main": "dist/em-xeditor.js",

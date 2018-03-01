@@ -63,31 +63,14 @@
           <td>emeditor</td>
         </tr>
         <tr>
-          <td>height</td>
-          <td>编辑器的 height</td>
-          <td>Number</td>
-          <td>200</td>
-        </tr>
-        <tr>
-          <td>uploadlink</td>
-          <td>上传的 ajax 接口地址</td>
-          <td>String</td>
-          <td>http://shared-client.inner.evente.cn:30340/upload/upImg</td>
-        </tr>
-        <tr>
           <td>cdnjs</td>
-          <td>ckeditor 的 js 地址</td>
+          <td>xeditor 的 js 地址</td>
           <td>String</td>
-          <td>https://cdn.ckeditor.com/4.7.3/standard-all/ckeditor.js</td>
+          <td>https://cdn.xeditor.com/4.7.3/standard-all/xeditor.js</td>
         </tr>
-        <tr>
-          <td>cdncss</td>
-          <td>ckeditor 的 css 地址</td>
-          <td>String</td>
-          <td>https://cdn.ckeditor.com/4.7.3/standard-all/contents.css</td>
         <tr>
           <td>config</td>
-          <td>ckeditor 的 自定义配置</td>
+          <td>xeditor 的 自定义配置。 具体怎么配置，及<a href="https://www.kancloud.cn/iq9891/xeditor/500803" target="_blank">默认可参照</a></td>
           <td>Object</td>
           <td>-</td>
         </tr>
@@ -123,16 +106,15 @@ export default {
       editorId1: 'editor1',
       subData: '',
       conf: {
-  			toolbarLocation: 'bottom',
-  			removePlugins: 'elementspath,resize',
+        image: {
+          type: 'base64',
+        },
   		},
     };
   },
   methods: {
     get() {
-      var editorElement = window.CKEDITOR.document.getById('editor');
-      var data = window.CKEDITOR.instances[this.editorId1].getData();
-      this.subData = data;
+      this.subData = this.data1;
     },
   },
 }
