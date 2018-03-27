@@ -2,7 +2,8 @@
   "name": "vue-xeditor",
   "version": "1.0.0",
   "description": "vue 的 xeditor 富文本编辑器",
-  "main": "dist/em-xeditor.js",
+  "main": "dist/vue-xeditor.min.js",
+  "unpkg": "dist/vue-xeditor.min.js",
   "files": [
     "dist",
     "src"
