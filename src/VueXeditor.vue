@@ -9,6 +9,7 @@ export default {
   data() {
     return {
       val: this.value,
+      editor: null,
     };
   },
   props: {
@@ -45,10 +46,10 @@ export default {
   methods: {
     afterLoadScript() {
       /* eslint-disable new-cap */
-      const editor = new window.xEditor(`#${this.id}`);
-      editor.config(this.config || config);
-      editor.create();
-      editor.text.$text.on('input', (evt) => {
+      this.editor = new window.xEditor(`#${this.id}`);
+      this.editor.config(this.config || config);
+      this.editor.create();
+      this.editor.text.$text.on('input', (evt) => {
         const value = evt.target.innerHTML;
         this.$emit('input', value);
         this.$emit('change', value);
