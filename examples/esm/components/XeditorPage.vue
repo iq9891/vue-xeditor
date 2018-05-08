@@ -74,6 +74,12 @@
           <td>Object</td>
           <td>-</td>
         </tr>
+        <tr>
+          <td>mounted ( 1.1.0 新增)</td>
+          <td>加载完成触发， ref 和 dom 可获取。返回 xeditor 对象 & xeditor 的 DOM 对象</td>
+          <td>Object</td>
+          <td>-</td>
+        </tr>
       </tbody>
     </table>
     <br>
@@ -91,6 +97,11 @@
           <td>change</td>
           <td>改变触发的方法</td>
           <td>val</td>
+        </tr>
+        <tr>
+          <td>mounted ( 1.1.0 新增)</td>
+          <td>加载完成触发， ref 和 dom 可获取</td>
+          <td>xeditor 对象 & xeditor 的 DOM 对象</td>
         </tr>
       </tbody>
     </table>
