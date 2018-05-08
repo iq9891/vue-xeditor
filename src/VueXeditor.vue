@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" :class="className" v-html="val"></div>
+  <div :id="id" :class="className" v-html="val" :ref="`edit${id}`"></div>
 </template>
 <script>
 import config from './config';
@@ -31,6 +31,10 @@ export default {
       type: Function,
       default: () => {},
     },
+    mounted: {
+      type: Function,
+      default: () => {},
+    },
     cdnjs: {
       type: String,
       default: 'https://unpkg.com/xeditor/dist/xeditor.min.js',
@@ -49,11 +53,16 @@ export default {
       this.editor = new window.xEditor(`#${this.id}`);
       this.editor.config(this.config || config);
       this.editor.create();
-      this.editor.text.$text.on('input', (evt) => {
-        const value = evt.target.innerHTML;
-        this.$emit('input', value);
-        this.$emit('change', value);
-        this.change(value);
+      // 加载之后抛出 xEditor 对象，针对后续操作
+      this.$nextTick(() => {
+        this.editor.text.$text.on('input', (evt) => {
+          const value = evt.target.innerHTML;
+          this.$emit('input', value);
+          this.$emit('change', value);
+          this.change(value);
+        });
+        this.$emit('mounted', this.editor, this.$refs[`edit${this.id}`]);
+        this.mounted(this.editor, this.$refs[`edit${this.id}`]);
       });
     },
   },
