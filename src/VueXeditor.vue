@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" :class="className" v-html="val" :ref="`edit${id}`"></div>
+  <div :id="id" class="xe" :class="className" v-html="val" :ref="`edit${id}`"></div>
 </template>
 <script>
 import config from './config';
@@ -18,10 +18,7 @@ export default {
       type: Number,
       default: 200,
     },
-    className: {
-      type: [Object, String],
-      default: 'xe',
-    },
+    className: [Object, String],
     config: Object,
     id: {
       type: String,

@@ -7,12 +7,12 @@
     </div>
     <br>
     <br>
-    <vue-xeditor :id="editorId1" v-model="data1" :className="{'editor-page': true}" uploadlink="http://shared-client.inner.evente.cn:30340/upload/upImg"></vue-xeditor>
+    <vue-xeditor :id="editorId1" v-model="data1"></vue-xeditor>
     <br>
     <br>
     <p>基本源码</p>
     <pre>
-      &lt;vue-xeditor :id="editorId1" v-model="data1" :className="{'editor-page': true}" uploadlink="http://shared-client.inner.evente.cn:30340/upload/upImg"&gt;&lt;/vue-xeditor&gt;
+      &lt;vue-xeditor :id="editorId1" v-model="data1" :className="{'editor-page': true}"&gt;&lt;/vue-xeditor&gt;
     </pre>
     <br>
     <br>

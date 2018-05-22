@@ -1,33 +1,29 @@
+// xEditor 配置文件
 /* eslint-disable */
 export default {
-  menus: [
+  menus: [ // 配置所显示菜单的功能
     'backcolor', // 背景颜色
-    'bold', // 加粗
-    'code', // 源代码
-    'copy', // 剪切
-    'cut', // 剪切
     'forecolor', // 文本颜色
-    'full', // 全屏
     'fontname', // 字体
     'fontsize', // 字号
-    'image', // 插入图像
+    'inserthorizontalrule', // 插入水平线
+    'link', // 插入链接
+    'bold', // 加粗
+    'underline', // 下划线
     'italic', // 倾斜
-    'justifycenter', // 两端对齐
+    'image', // 插入图像
+    'justifycenter', // 居中对齐
     'justifyfull', // 两端对齐
     'justifyleft', // 左对齐
     'justifyright', // 右对齐
-    'inserthorizontalrule', // 插入水平线
-    // 'insertorderedlist', // 有序列表
-    // 'insertUnorderedlist', // 无序列表
-    'link', // 插入链接
+    'full', // 全屏
+    'code', // 源代码
+    'copy', // 复制
+    'cut', // 剪切
     'paste', // 普通粘贴
     'plainpaste', // 粘贴为无格式文本
-    // 'redo', // 反撤销
-    // 'removeformat', // 删除样式
     'wordpaste', // 从 MS Word 粘贴
     'table', // 表格
-    'underline', // 下划线
-    // 'undo', // 撤销
     'video', // 插入视频
   ],
   lang: {
@@ -42,7 +38,7 @@ export default {
     fontsize: '字号',
     image: '插入图像',
     italic: '倾斜',
-    justifycenter: '两端对齐',
+    justifycenter: '居中对齐',
     justifyfull: '两端对齐',
     justifyleft: '左对齐',
     justifyright: '右对齐',
@@ -71,22 +67,22 @@ export default {
       }
       return alert('上传错误');
     },
-    error() { // ajax 报错处理
+    error() {
       alert('上传错误');
     },
-    unit: '%', // 图片设置的单位
+    unit: '%',
     multiple: true, // 允许多选
     accept: 'image/jpg,image/jpeg,image/png,image/gif,image/bmp', // 选择的类型
   },
   font: {
-    fontname: [ // 设置字体
+    fontname: [
       '宋体',
       '微软雅黑',
       'Arial',
       'Comic Sans MS',
       'Courier New',
     ],
-    fontnameplaceholder: '字体', // 字体文案
+    fontnameplaceholder: '字体',
     fontsize: [ // 只有 7 个， 多了不生效
       '非常小',
       '稍微小',
@@ -108,5 +104,10 @@ export default {
     open: true,
     drop: '释放鼠标', // 松手之后
     enter: '将文件拖拽到此区域', // 进入区域之前
+  },
+  name: {
+    prefix: '',
+    menu: '',
+    wrap: '',
   },
 };
