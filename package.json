@@ -1,6 +1,6 @@
 {
   "name": "vue-xeditor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "vue 的 xeditor 富文本编辑器",
   "main": "dist/vue-xeditor.min.js",
   "unpkg": "dist/vue-xeditor.min.js",
